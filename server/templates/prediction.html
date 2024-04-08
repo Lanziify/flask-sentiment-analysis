@@ -1,0 +1,23 @@
+<h1 class="mb-4">{{ data.predictions }}</h1>
+<p>Negative: {{ data.probabilities.neg }}</p>
+<div class="progress">
+  <div
+    class="progress-bar bg-danger"
+    role="progressbar"
+    style="width: {{ data.probabilities.neg * 100 }}%;"
+    aria-valuenow="{{ data.probabilities.neg }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
+</div>
+<p>Positive: {{ data.probabilities.pos }}</p>
+<div class="progress">
+  <div
+    class="progress-bar bg-success"
+    role="progressbar"
+    style="width: {{ data.probabilities.pos * 100 }}%;"
+    aria-valuenow="{{ data.probabilities.pos }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  ></div>
+</div>
